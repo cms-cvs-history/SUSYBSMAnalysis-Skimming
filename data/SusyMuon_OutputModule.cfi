@@ -1,0 +1,11 @@
+include "SUSYBSMAnalysis/Skimming/data/SusyMuon_EventContent.cff"
+
+module susyMuonOutputModule = PoolOutputModule {
+  untracked string fileName = "susyMuon.root"
+  using AODSIMSusyMuonEventContent
+  using susyMuonEventSelection 
+  untracked PSet datasets = {
+    untracked string dataTier = "USER"
+    untracked string filterName = "susyMuon"
+  }
+}

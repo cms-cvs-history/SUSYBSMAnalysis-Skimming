@@ -1,0 +1,51 @@
+block susyMuonHitsEventContent = {
+  untracked vstring outputCommands = {
+# add muon hits
+       "keep *_standAloneMuons_*_*",
+       "keep *_globalMuons_*_*",
+       "keep *_dt1DRecHits_*_*",
+       "keep *_dt2DSegments_*_*",
+       "keep *_dt4DSegments_*_*",
+# add tk dedx data
+       "keep recoTracks_TrackRefitter_*_*",
+       "keep *_dedxHitsFromRefitter_*_*",
+       "keep *_dedxTruncated40_*_*" ,
+# remove  some jet collection
+       "drop recoCaloJets_midPointCone7CaloJets_*_*",
+	"drop recoCaloJets_iterativeCone7CaloJets_*_*",
+	"drop recoGenJets_iterativeCone7GenJetsNoNuBSM_*_*",
+	"drop recoGenJets_iterativeCone7GenJetsPt10_*_*",
+	"drop recoGenJets_midPointCone5GenJetsNoNuBSM_*_*",
+	"drop recoGenJets_midPointCone7GenJetsPt10_*_*",
+	"drop recoGenJets_midPointCone7GenJetsNoNuBSM_*_*"
+
+  }
+}
+
+
+include "Configuration/EventContent/data/EventContent.cff"
+
+
+block AODSIMSusyMuonHitsEventContent = {
+  untracked vstring outputCommands = {
+  }
+}
+
+replace AODSIMSusyMuonHitsEventContent.outputCommands += AODSIMEventContent.outputCommands
+replace AODSIMSusyMuonHitsEventContent.outputCommands += susyMuonHitsEventContent.outputCommands
+
+
+block susyMuonHitsEventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+    }
+  }
+}
+
+replace susyMuonHitsEventSelection.SelectEvents.SelectEvents  += "hscpMuon"
+replace susyMuonHitsEventSelection.SelectEvents.SelectEvents  += "hscpMET"
+
+# hscpMuon should include these
+#replace susyMuonHitsEventSelection.SelectEvents.SelectEvents  += "tevDiMuonHighPt"
+#replace susyMuonHitsEventSelection.SelectEvents.SelectEvents  += "tevDiMuonLowPt"
+
