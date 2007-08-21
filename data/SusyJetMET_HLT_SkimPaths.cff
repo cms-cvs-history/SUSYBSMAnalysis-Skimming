@@ -1,12 +1,12 @@
 include "SUSYBSMAnalysis/Skimming/data/SusyHLTPaths.cff"
 
 module jetFilter2x30 = EtMinCaloJetCountFilter {
-    InputTag src = 
+    InputTag src = iterativeCone5CaloJets
     uint32 minNumber = 2
     double etMin = 30.
  }
 module jetFilter1x80 = EtMinCaloJetCountFilter {
-    InputTag src = 
+    InputTag src = iterativeCone5CaloJets 
     uint32 minNumber = 1
     double etMin = 80.
  }

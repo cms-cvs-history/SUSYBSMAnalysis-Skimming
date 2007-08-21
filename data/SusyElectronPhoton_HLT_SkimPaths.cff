@@ -1,13 +1,13 @@
 include "SUSYBSMAnalysis/Skimming/data/SusyHLTPaths.cff"
 
 module photonFilter2x20 = EtMinPhotonCountFilter {
-    InputTag src = photon 
+    InputTag src = photons 
     uint32 minNumber = 2
     double etMin = 20.
  }
 
 module photonFilter1x80 = EtMinPhotonCountFilter {
-    InputTag src = photon
+    InputTag src = photons
     uint32 minNumber = 1
     double etMin = 80.
  }
