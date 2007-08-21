@@ -1,0 +1,54 @@
+# ******* (SOME OF THE) UNUSED HLT BITS **********
+#"HLT1jetPE1","HLT1jetPE3","HLT1jetPE5",
+#"HLTB1Jet","HLTB2Jet","HLTB3Jet","HLTB4Jet","HLTBHT",
+#"HLT1Tau","HLT1Tau1MET","HLT2TauPixel"
+#"HLT2jetAco","HLT1jet1METAco","HLT3jet1MET","HLT4jet1MET","HLT2jetvbfMET","HLT2jet1METNV"
+#"HLTXElectronBJet","HLTXElectron3Jet","HLTXElectron4Jet","HLTXElectronTau"
+#"HLT2MuonJPsi","HLT2MuonUpsilon","HLT2MuonZ","HLTNMuonNonIso",
+#"HLTB1JetMu","HLTB2JetMu","HLTB3JetMu","HLTB4JetMu","HLTBHTMu","HLTBJPsiMuMu","HLTXMuonBJet","HLTXMuonBJetSoftMuon","HLTXMuonTau","HLTXElectronMuon","HLTXElectronMuonRelaxed", 
+
+
+# JETMET Path
+# TO BE REVIEWED: missing "1metnv" from spreadsheet 
+module susyHLTJetMETPath = hltHighLevel  from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
+replace susyHLTJetMETPath.TriggerResultsTag = TriggerResults::HLT
+replace susyHLTJetMETPath.HLTPaths =   {
+"HLT1jet","HLT2jet","HLT3jet","HLT4jet",
+"HLT2jet1MET","HLT1jet1MET",
+"HLT1MET1HT"}
+
+
+
+
+
+
+# MET Only path
+
+module susyHLTMETOnlyPath = hltHighLevel  from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
+replace susyHLTMETOnlyPath.TriggerResultsTag = TriggerResults::HLT
+replace susyHLTMETOnlyPath.HLTPaths =   { "HLT1MET"}
+
+
+# Muon HLT Path
+#TO BE REVIEWD:
+# in spreadsheet only: 1MuonIso, 2MuonIso, 2MuonNonIso, 2MuonSameSign, MuonJets, ElectronMuon, ElectronMuonRelaxed, CandHLT2MuonIso
+# we really do not want "HLT1MuonNonIso"
+module susyHLTMuonPath = hltHighLevel  from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
+replace susyHLTMuonPath.TriggerResultsTag = TriggerResults::HLT
+replace susyHLTMuonPath.HLTPaths =   { "HLT1MuonIso", "HLT2MuonIso", "HLT2MuonNonIso","HLT2MuonSameSign","HLTXMuonJets","HLTXElectronMuon","HLTXElectronMuonRelaxed","CandHLT2MuonIso"}
+
+
+
+# Photon HLT Path
+module susyHLTPhotonPath = hltHighLevel  from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
+replace susyHLTPhotonPath.TriggerResultsTag = TriggerResults::HLT
+replace susyHLTPhotonPath.HLTPaths =   { "HLT1Photon","HLT1PhotonRelaxed","HLT2Photon","HLT2PhotonRelaxed"}
+
+
+# Electron HLT Path
+module susyHLTElectronPath = hltHighLevel  from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
+replace susyHLTElectronPath.TriggerResultsTag = TriggerResults::HLT
+replace susyHLTElectronPath.HLTPaths =   { "HLT1Electron","HLT1ElectronRelaxed","HLT2Electron","HLT2ElectronRelaxed","HLT1EMHighEt","HLT1EMVeryHighEt", "HLTXElectron1Jet","HLTXElectron2Jet","HLTXElectronMuon","HLTXElectronMuonRelaxed" }
+
+
+

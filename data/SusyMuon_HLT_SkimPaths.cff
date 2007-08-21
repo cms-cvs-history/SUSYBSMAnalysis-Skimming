@@ -1,0 +1,4 @@
+include "SUSYBSMAnalysis/Skimming/data/SusyHLTPaths.cff"
+
+path susyMuon = {susyHLTMuonPath}
+

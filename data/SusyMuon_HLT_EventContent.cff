@@ -1,0 +1,24 @@
+include "Configuration/EventContent/data/EventContent.cff"
+
+
+block AODSIMSusyMuonEventContent = {
+  untracked vstring outputCommands = {
+  }
+}
+
+replace AODSIMSusyMuonEventContent.outputCommands += AODSIMEventContent.outputCommands
+
+
+
+block susyMuonEventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+    }
+  }
+}
+
+replace susyMuonEventSelection.SelectEvents.SelectEvents  += "susyMuon"
+
+
+
+

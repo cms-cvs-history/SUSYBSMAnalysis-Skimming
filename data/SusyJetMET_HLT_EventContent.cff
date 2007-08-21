@@ -1,0 +1,21 @@
+include "Configuration/EventContent/data/EventContent.cff"
+
+
+block AODSIMSusyJetMETEventContent = {
+  untracked vstring outputCommands = {
+  }
+}
+
+replace AODSIMSusyJetMETEventContent.outputCommands += AODSIMEventContent.outputCommands
+
+
+
+block susyJetMETEventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+    }
+  }
+}
+
+replace susyJetMETEventSelection.SelectEvents.SelectEvents  += "susyJetMET"
+replace susyJetMETEventSelection.SelectEvents.SelectEvents  += "susyMETOnly"
