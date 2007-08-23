@@ -48,7 +48,7 @@ replace susyHLTPhotonPath.HLTPaths =   { "HLT1Photon","HLT1PhotonRelaxed","HLT2P
 # Electron HLT Path
 module susyHLTElectronPath = hltHighLevel  from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
 replace susyHLTElectronPath.TriggerResultsTag = TriggerResults::HLT
-replace susyHLTElectronPath.HLTPaths =   { "HLT1Electron","HLT1ElectronRelaxed","HLT2Electron","HLT2ElectronRelaxed","HLT1EMHighEt","HLT1EMVeryHighEt", "HLTXElectron1Jet","HLTXElectron2Jet","HLTXElectronMuon","HLTXElectronMuonRelaxed" }
+replace susyHLTElectronPath.HLTPaths =   { "HLT1Electron","HLT1ElectronRelaxed","HLT2Electron","HLT2ElectronRelaxed","HLT1EMHighEt","HLT1EMVeryHighEt", "HLTXElectron1Jet","HLTXElectron2Jet" }
 
 
 
