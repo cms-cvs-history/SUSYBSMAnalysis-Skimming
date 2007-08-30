@@ -20,6 +20,7 @@ block susyElectronPhotonEventSelection = {
 replace susyElectronPhotonEventSelection.SelectEvents.SelectEvents += "lepSUSY_0Muon_1Elec_1Jets_MET"
 replace susyElectronPhotonEventSelection.SelectEvents.SelectEvents += "lepSUSY_0Muon_2Elec_2Jets_MET"
 replace susyElectronPhotonEventSelection.SelectEvents.SelectEvents += "lepSUSY_1Muon_1Elec_2Jets_MET"
+replace susyElectronPhotonEventSelection.SelectEvents.SelectEvents += "lepSUSY_0Muon_1Elec_2Jets_MET"
 
 replace susyElectronPhotonEventSelection.SelectEvents.SelectEvents += "hadSUSYdiElec"
 replace susyElectronPhotonEventSelection.SelectEvents.SelectEvents += "hadSUSYTopElec"

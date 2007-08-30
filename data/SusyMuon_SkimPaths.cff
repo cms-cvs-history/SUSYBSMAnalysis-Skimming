@@ -1,3 +1,4 @@
+#TO BE RUN ON : PDMuon
 
 ###################################################
 #   WG1
@@ -5,6 +6,8 @@
 include "SUSYBSMAnalysis/CSA07Skims/data/lepSUSY_2Muon_0Elec_2Jets_MET_Path.cff"
 include "SUSYBSMAnalysis/CSA07Skims/data/lepSUSY_1Muon_1Elec_2Jets_MET_Path.cff"
 include "SUSYBSMAnalysis/CSA07Skims/data/lepSUSY_1Muon_0Elec_1Jets_MET_Path.cff"
+
+include "SUSYBSMAnalysis/CSA07Skims/data/lepSUSY_1Muon_0Elec_2Jets_MET_Path.cff"
 
 
 
@@ -15,3 +18,4 @@ include "SUSYBSMAnalysis/CSA07Skims/data/lepSUSY_1Muon_0Elec_1Jets_MET_Path.cff"
 include "SUSYBSMAnalysis/CSA07Skims/data/hadSUSYdiMuonPath.cff"
 include "SUSYBSMAnalysis/CSA07Skims/data/hadSUSYTopMuonPath.cff"
 
+include "SUSYBSMAnalysis/CSA07Skims/data/hadSUSYQCDControlMETPath.cff"

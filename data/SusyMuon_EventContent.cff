@@ -20,9 +20,13 @@ block susyMuonEventSelection = {
 replace susyMuonEventSelection.SelectEvents.SelectEvents  += "hadSUSYdiMuon"
 replace susyMuonEventSelection.SelectEvents.SelectEvents  += "hadSUSYTopMuon"
 
+replace susyMuonEventSelection.SelectEvents.SelectEvents  += "hadSUSYQCDControlMET"
+
 replace susyMuonEventSelection.SelectEvents.SelectEvents  += "lepSUSY_1Muon_0Elec_1Jets_MET"
 replace susyMuonEventSelection.SelectEvents.SelectEvents  += "lepSUSY_1Muon_1Elec_2Jets_MET"
 replace susyMuonEventSelection.SelectEvents.SelectEvents  += "lepSUSY_2Muon_0Elec_2Jets_MET"
+
+replace susyMuonEventSelection.SelectEvents.SelectEvents  += "lepSUSY_1Muon_0Elec_2Jets_MET"
 
 
 
