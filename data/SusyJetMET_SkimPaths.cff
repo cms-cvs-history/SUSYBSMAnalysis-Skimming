@@ -7,6 +7,9 @@
 include "SUSYBSMAnalysis/CSA07Skims/data/lepSUSY_0Muon_1Elec_2Jets_MET_Path.cff"
 include "SUSYBSMAnalysis/CSA07Skims/data/lepSUSY_1Muon_0Elec_2Jets_MET_Path.cff"
 
+include "SUSYBSMAnalysis/CSA07Skims/data/lepSUSY_0Muon_2Elec_2Jets_MET_Path.cff"
+include "SUSYBSMAnalysis/CSA07Skims/data/lepSUSY_0Muon_1Elec_1Jets_MET_Path.cff"
+
 
 ###################################################
 #   WG2
