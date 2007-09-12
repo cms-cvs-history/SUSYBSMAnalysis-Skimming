@@ -1,16 +1,16 @@
 include "Configuration/EventContent/data/EventContent.cff"
 
 
-block AODSIMSusyElectronPhotonEventContent = {
+block AODSIMSusyHLTElectronPhotonEventContent = {
   untracked vstring outputCommands = {
   }
 }
 
-replace AODSIMSusyElectronPhotonEventContent.outputCommands += AODSIMEventContent.outputCommands
+replace AODSIMSusyHLTElectronPhotonEventContent.outputCommands += AODSIMEventContent.outputCommands
 
 
 
-block susyElectronPhotonEventSelection = {
+block susyHLTElectronPhotonEventSelection = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
     }
@@ -18,8 +18,8 @@ block susyElectronPhotonEventSelection = {
 }
 
 
-replace susyElectronPhotonEventSelection.SelectEvents.SelectEvents += "susyPhoton"
-replace susyElectronPhotonEventSelection.SelectEvents.SelectEvents += "susyElectron"
+replace susyHLTElectronPhotonEventSelection.SelectEvents.SelectEvents += "susyPhoton"
+replace susyHLTElectronPhotonEventSelection.SelectEvents.SelectEvents += "susyElectron"
 
 
 

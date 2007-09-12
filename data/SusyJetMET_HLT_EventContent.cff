@@ -1,21 +1,21 @@
 include "Configuration/EventContent/data/EventContent.cff"
 
 
-block AODSIMSusyJetMETEventContent = {
+block AODSIMSusyHLTJetMETEventContent = {
   untracked vstring outputCommands = {
   }
 }
 
-replace AODSIMSusyJetMETEventContent.outputCommands += AODSIMEventContent.outputCommands
+replace AODSIMSusyHLTJetMETEventContent.outputCommands += AODSIMEventContent.outputCommands
 
 
 
-block susyJetMETEventSelection = {
+block susyHLTJetMETEventSelection = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
     }
   }
 }
 
-replace susyJetMETEventSelection.SelectEvents.SelectEvents  += "susyJetMET"
-replace susyJetMETEventSelection.SelectEvents.SelectEvents  += "susyMETOnly"
+replace susyHLTJetMETEventSelection.SelectEvents.SelectEvents  += "susyJetMET"
+replace susyHLTJetMETEventSelection.SelectEvents.SelectEvents  += "susyMETOnly"
