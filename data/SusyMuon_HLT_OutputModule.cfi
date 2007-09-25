@@ -4,7 +4,7 @@ module susyHLTMuonOutputModule = PoolOutputModule {
   untracked string fileName = "susyHLTMuon.root"
   using AODSIMSusyHLTMuonEventContent
   using susyHLTMuonEventSelection 
-  untracked PSet datasets = {
+  untracked PSet dataset = {
     untracked string dataTier = "USER"
     untracked string filterName = "susyHLTMuon"
   }

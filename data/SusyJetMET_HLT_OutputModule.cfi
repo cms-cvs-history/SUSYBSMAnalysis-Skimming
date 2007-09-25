@@ -4,7 +4,7 @@ module susyHLTJetMETOutputModule = PoolOutputModule {
   untracked string fileName = "susyHLTJetMET.root"
   using AODSIMSusyHLTJetMETEventContent
   using susyHLTJetMETEventSelection 
-  untracked PSet datasets = {
+  untracked PSet dataset = {
     untracked string dataTier = "USER"
     untracked string filterName = "susyHLTJetMET"
   }
