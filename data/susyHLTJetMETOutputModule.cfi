@@ -1,0 +1,11 @@
+include "SUSYBSMAnalysis/Skimming/data/SusyJetMET_HLT_EventContent.cff"
+
+module susyHLTJetMETOutputModule = PoolOutputModule {
+  untracked string fileName = "susyHLTJetMET.root"
+  using AODSIMSusyHLTJetMETEventContent
+  using susyHLTJetMETEventSelection 
+  untracked PSet dataset = {
+    untracked string dataTier = "USER"
+    untracked string filterName = "susyHLTJetMET"
+  }
+}

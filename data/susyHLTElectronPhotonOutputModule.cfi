@@ -1,0 +1,11 @@
+include "SUSYBSMAnalysis/Skimming/data/SusyElectronPhoton_HLT_EventContent.cff"
+
+module susyHLTElectronPhotonOutputModule = PoolOutputModule {
+  untracked string fileName = "susyHLTElectronPhoton.root"
+  using AODSIMSusyHLTElectronPhotonEventContent
+  using susyHLTElectronPhotonEventSelection 
+  untracked PSet dataset = {
+    untracked string dataTier = "USER"
+    untracked string filterName = "susyHLTElectronPhoton"
+  }
+}
