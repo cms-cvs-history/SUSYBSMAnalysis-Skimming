@@ -6,6 +6,9 @@ block susyMuonHitsEventContent = {
        "keep *_dt1DRecHits_*_*",
        "keep *_dt2DSegments_*_*",
        "keep *_dt4DSegments_*_*",
+       "keep *_csc2DRecHits_*_*",
+       "keep *_cscSegments_*_*",
+       "keep *_rpcRecHits_*_*",
 # add tk dedx data
        "keep recoTracks_TrackRefitter_*_*",
        "keep *_dedxHitsFromRefitter_*_*",
