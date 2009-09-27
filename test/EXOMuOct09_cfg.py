@@ -19,12 +19,33 @@ process.source = cms.Source("PoolSource",
 #load the EventContent and Skim cff/i files for EXOMu sub-skim.
 process.load('SUSYBSMAnalysis.Skimming.EXOMuOct09_EventContent_cfi')
 process.load('SUSYBSMAnalysis.Skimming.EXOMuOct09_cff')
-process.eventInfo = cms.OutputModule (
-    "AsciiOutputModule"
-)
 
-#define output file name.
-process.exoticaMuOutputModule.fileName = cms.untracked.string('EXOMuOct09.root')
+#possible trigger modification by user, defualt HLT_Mu5 in EXOMuOct09_cff.py
+#process.exoticaMuHLT.HLTPaths = ['HLT_Mu3']
 
-process.exoticaMuSkimPath=cms.Path(process.exoticaMuSeq)
-process.endPath = cms.EndPath(process.eventInfo+process.exoticaMuOutputModule)
+
+#define output file name. 
+process.exoticaMuOutputModule.fileName = cms.untracked.string('EXOMuOct09.root')#possible EventContent  modification by user
+#AODSIMEventContent/AODEventContent/RECOSIMEventContent/RECOEventContent
+#by uncommenting next lines.
+#from Configuration.EventContent.EventContent_cff import *
+#from SUSYBSMAnalysis.Skimming.EXOMuOct09_EventContent_cfi import *
+#SpecifiedEvenetContent=cms.PSet(
+#    outputCommands = cms.untracked.vstring(
+#      "keep *_exoticaHLTMuonFilter_*_*",
+#	  "keep *_exoticaRecoMuonFilter_*_*",
+#      )
+#    )
+#process.exoticaMuOutputModule.outputCommands.extend(RECOSIMEventContent.outputCommands)
+#process.exoticaMuOutputModule.outputCommands.extend(SpecifiedEvenetContent.outputCommands)
+
+#possible cut modification by user
+#process.exoticaHLTMuonFilter.cut=  cms.string('pt > 10.0')
+#process.exoticaHLTMuonFilter.minN=   cms.int32(2) 
+#process.exoticaRecoMuonFilter.cut=  cms.string('pt > 15.0')
+
+#Possible exoticaMuHLTQualitySeq or exoticaMuRecoQualitySeq selection by user
+process.exoticaMuSkimPath=cms.Path(process.exoticaMuHLTQualitySeq)
+#process.exoticaMuSkimPath=cms.Path(process.exoticaMuRecoQualitySeq)
+
+process.endPath = cms.EndPath(process.exoticaMuOutputModule)
