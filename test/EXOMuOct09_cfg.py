@@ -20,7 +20,7 @@ process.source = cms.Source("PoolSource",
 process.load('SUSYBSMAnalysis.Skimming.EXOMuOct09_EventContent_cfi')
 process.load('SUSYBSMAnalysis.Skimming.EXOMuOct09_cff')
 
-#possible trigger modification by user, defualt HLT_Mu5 in EXOMuOct09_cff.py
+#possible trigger modification by user, defualt HLT_Mu9 in EXOMuOct09_cff.py
 #process.exoticaMuHLT.HLTPaths = ['HLT_Mu3']
 
 
@@ -40,7 +40,7 @@ process.exoticaMuOutputModule.fileName = cms.untracked.string('EXOMuOct09.root')
 #process.exoticaMuOutputModule.outputCommands.extend(SpecifiedEvenetContent.outputCommands)
 
 #possible cut modification by user
-#process.exoticaHLTMuonFilter.cut=  cms.string('pt > 10.0')
+#process.exoticaHLTMuonFilter.cut=  cms.string('pt > 5.0')
 #process.exoticaHLTMuonFilter.minN=   cms.int32(2) 
 #process.exoticaRecoMuonFilter.cut=  cms.string('pt > 15.0')
 
